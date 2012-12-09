@@ -62,6 +62,7 @@
     <Compile Include="code_generation\IJavascriptGenerator.cs" />
     <Compile Include="code_generation\OrderLoopNode.cs" />
     <Compile Include="code_generation\ProgramNode.cs" />
+    <Compile Include="code_generation\SetVariableNode.cs" />
     <Compile Include="code_generation\StatementNode.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
