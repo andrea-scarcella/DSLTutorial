@@ -19,8 +19,10 @@ namespace FreightLanguage.grammar
             var freightDeclaration = new NonTerminal("freightDeclaration");
             var setVariable = new NonTerminal("setVariable");
             var orderLoop = new NonTerminal("orderLoop");
-            var expression = new NonTerminal("expression");
+            var expression = new NonTerminal("expression",typeof(FreightLanguage.code_generation.ExpressionNode));
             var variable = new IdentifierTerminal("variable");
+            //variable.AddKeywords("set", "to", "if", "freight", "cost", "is", "loop", "through", "order");
+
             var binaryOperator = new NonTerminal("binaryOperator");
             // define the grammar
             //<BinaryOperator> ::= "+" | "-" | "*" | "/" | "<" | ">" | "<=" | ">=" | "is"
@@ -42,6 +44,8 @@ namespace FreightLanguage.grammar
             freightDeclaration.Rule = ToTerm("freight") + "cost" + "is" + expression + ";";
             //<Expression> ::= <number> | <variable> | <string> |<Expression> <BinaryOperator> <Expression> | "(" <Expression> ")"
             var number = new NumberLiteral("number");
+            //TEST
+            number.DefaultIntTypes = number.DefaultIntTypes = new TypeCode[] { TypeCode.Int32, TypeCode.Int64, NumberLiteral.TypeCodeBigInt };
             var stringLiteral = new StringLiteral("stringType", "\"");
             expression.Rule = number | variable | stringLiteral | expression + binaryOperator + expression | "(" + expression + ")";
             this.Root = program;

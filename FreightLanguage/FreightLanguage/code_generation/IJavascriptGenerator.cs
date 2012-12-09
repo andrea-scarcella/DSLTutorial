@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FreightLanguage.code_generation
 {
-    interface IJavascriptGenerator
+   public interface IJavascriptGenerator
     {
         void GenerateScript(StringBuilder builder);
     }
