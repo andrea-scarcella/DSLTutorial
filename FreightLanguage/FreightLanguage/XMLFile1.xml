@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ParseTree>
+	<Node Term="program">
+		<Node Term="statementList">
+			<Node Term="statement">
+				<Node Term="setVariable">
+					<Node Term="set" Terminal="KeyTerm" Value="Set" />
+					<Node Term="variable" Terminal="IdentifierTerminal" Value="total" />
+					<Node Term="to" Terminal="KeyTerm" Value="to" />
+					<Node Term="expression">
+						<Node Term="number" Terminal="NumberLiteral" Value="5" />
+					</Node>
+				</Node>
+				<Node Term=";"  Terminal="KeyTerm" Value=";" />
+			</Node>
+			<Node Term="statement">
+				<Node Term="ifStatement">
+					<Node Term="if" Terminal="KeyTerm" Value="If" />
+					<Node Term="expression">
+						<Node Term="expression">
+							<Node Term="variable" Terminal="IdentifierTerminal" Value="region" />
+						</Node>
+						<Node Term="binaryOperator">
+							<Node Term="is" Terminal="KeyTerm" Value="is" />
+						</Node>
+						<Node Term="expression">
+							<Node Term="stringType" Terminal="StringLiteral" Value="Africa" />
+						</Node>
+					</Node>
+					<Node Term="["  Terminal="KeyTerm" Value="[" />
+					<Node Term="statementList">
+						<Node Term="statement">
+							<Node Term="setVariable">
+								<Node Term="set" Terminal="KeyTerm" Value="Set" />
+								<Node Term="variable" Terminal="IdentifierTerminal" Value="total" />
+								<Node Term="to" Terminal="KeyTerm" Value="to" />
+								<Node Term="expression">
+									<Node Term="number" Terminal="NumberLiteral" Value="4" />
+								</Node>
+							</Node>
+							<Node Term=";"  Terminal="KeyTerm" Value=";" />
+						</Node>
+					</Node>
+					<Node Term="]" Terminal="KeyTerm" Value="]" />
+				</Node>
+			</Node>
+		</Node>
+		<Node Term="freightDeclaration">
+			<Node Term="freight" Terminal="KeyTerm" Value="Freight" />
+			<Node Term="cost" Terminal="KeyTerm" Value="cost" />
+			<Node Term="is" Terminal="KeyTerm" Value="is" />
+			<Node Term="expression">
+				<Node Term="variable" Terminal="IdentifierTerminal" Value="total" />
+			</Node>
+			<Node Term=";"  Terminal="KeyTerm" Value=";" />
+		</Node>
+	</Node>
+</ParseTree>

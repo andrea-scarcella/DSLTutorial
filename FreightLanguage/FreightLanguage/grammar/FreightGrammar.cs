@@ -42,8 +42,9 @@ namespace FreightLanguage.grammar
             freightDeclaration.Rule = ToTerm("freight") + "cost" + "is" + expression + ";";
             //<Expression> ::= <number> | <variable> | <string> |<Expression> <BinaryOperator> <Expression> | "(" <Expression> ")"
             var number = new NumberLiteral("number");
-            var stringLiteral = new StringLiteral("stringType");
+            var stringLiteral = new StringLiteral("stringType", "\"");
             expression.Rule = number | variable | stringLiteral | expression + binaryOperator + expression | "(" + expression + ")";
+            this.Root = program;
         }
     }
 }
