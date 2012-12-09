@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ParseTree>
+	<Node Term="program">
+		<Node Term="cameraSize">
+			<Node Term="number" Terminal="NumberLiteral" Value="400" />
+			<Node Term="number" Terminal="NumberLiteral" Value="300" />
+		</Node>
+		<Node Term="cameraPosition">
+			<Node Term="number" Terminal="NumberLiteral" Value="100" />
+			<Node Term="number" Terminal="NumberLiteral" Value="100" />
+		</Node>
+		<Node Term="commandList">
+			<Node Term="command">
+				<Node Term="number" Terminal="NumberLiteral" Value="200" />
+				<Node Term="direction">
+					<Node Term="right" Terminal="KeyTerm" Value="right" />
+				</Node>
+			</Node>
+			<Node Term="command">
+				<Node Term="number" Terminal="NumberLiteral" Value="100" />
+				<Node Term="direction">
+					<Node Term="up" Terminal="KeyTerm" Value="up" />
+				</Node>
+			</Node>
+			<Node Term="command">
+				<Node Term="number" Terminal="NumberLiteral" Value="250" />
+				<Node Term="direction">
+					<Node Term="left" Terminal="KeyTerm" Value="left" />
+				</Node>
+			</Node>
+			<Node Term="command">
+				<Node Term="number" Terminal="NumberLiteral" Value="50" />
+				<Node Term="direction">
+					<Node Term="down" Terminal="KeyTerm" Value="down" />
+				</Node>
+			</Node>
+		</Node>
+	</Node>
+</ParseTree>
