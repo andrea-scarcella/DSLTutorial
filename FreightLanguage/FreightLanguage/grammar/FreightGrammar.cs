@@ -15,7 +15,7 @@ namespace FreightLanguage.grammar
             var program = new NonTerminal("program");
             var statementList = new NonTerminal("statementList");
             var statement = new NonTerminal("statement");
-            var ifStatement = new NonTerminal("ifStatement");
+            var ifStatement = new NonTerminal("ifStatement",typeof(FreightLanguage.code_generation.IfStatementNode));
             var freightDeclaration = new NonTerminal("freightDeclaration");
             var setVariable = new NonTerminal("setVariable");
             var orderLoop = new NonTerminal("orderLoop");
@@ -45,6 +45,7 @@ namespace FreightLanguage.grammar
             var stringLiteral = new StringLiteral("stringType", "\"");
             expression.Rule = number | variable | stringLiteral | expression + binaryOperator + expression | "(" + expression + ")";
             this.Root = program;
+            MarkPunctuation("[", "]", ";");
         }
     }
 }
